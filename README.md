@@ -10,7 +10,7 @@ Situs web statis untuk katalog 19 flora dan 11 burung di jalur Curug Siluwok, De
 - Halaman Tentang serta Referensi dan Kredit
 - Desain responsif untuk telepon genggam
 - Empat logo proyek yang telah dioptimalkan
-- Gambar placeholder yang dapat langsung diganti
+- Foto flora dan burung yang telah dioptimalkan ke format WebP
 - Tidak membutuhkan database, npm, atau proses build
 
 ## Cara mengunggah ke GitHub Pages
@@ -25,7 +25,7 @@ Situs web statis untuk katalog 19 flora dan 11 burung di jalur Curug Siluwok, De
 
 Semua tautan memakai jalur relatif sehingga situs dapat berjalan sebagai project site GitHub Pages maupun dipindahkan ke domain khusus di kemudian hari.
 
-## Mengganti foto spesies
+## Foto spesies
 
 Setiap spesies memiliki gambar WebP di:
 
@@ -40,13 +40,7 @@ assets/images/species/aren.webp
 assets/images/species/kutilang-emas.webp
 ```
 
-Cara paling mudah adalah mengganti berkas placeholder dengan foto baru menggunakan **nama file dan format WebP yang sama**. Rasio yang disarankan adalah 3:2, minimal 1200 × 800 piksel, dan ukuran ideal di bawah 300 KB.
-
-Setelah mengganti foto, perbarui kredit pada halaman spesies dan halaman `referensi/index.html`:
-
-- Nama fotografer atau pemilik
-- Sumber atau tautan asal
-- Lisensi atau izin penggunaan
+Foto yang diberikan tim sudah dimasukkan dan dikompresi. Apabila foto diganti kemudian, gunakan nama file WebP yang sama dan perbarui kredit pada halaman spesies, `data/species.json`, serta `referensi/index.html`. Rasio yang disarankan adalah 3:2 dengan ukuran sekitar 1200 × 800 piksel.
 
 ## Mengganti logo
 
@@ -82,7 +76,31 @@ Domain atau subdomain dapat ditambahkan kemudian melalui Settings → Pages. Seb
 
 Sebelum situs diumumkan secara resmi:
 
-- Ganti semua placeholder dengan foto final.
-- Lengkapi kredit dan lisensi foto.
+- Pastikan seluruh foto dan kredit sudah disetujui untuk publikasi.
 - Lakukan pemeriksaan terakhir nama ilmiah dan status konservasi.
 - Uji semua halaman dan kode QR pada beberapa telepon genggam.
+
+## Mengganti warna hero dengan foto Curug Siluwok
+
+Beranda saat ini memakai warna hijau polos. Setelah foto Curug Siluwok tersedia:
+
+1. Simpan foto sebagai `assets/images/hero-curug-siluwok.webp`.
+2. Buka `assets/css/site.css`.
+3. Pada aturan `.hero-panel.hero-solid`, tambahkan:
+
+```css
+background-image: linear-gradient(rgba(20, 41, 29, .72), rgba(20, 41, 29, .72)),
+                  url("../images/hero-curug-siluwok.webp");
+background-size: cover;
+background-position: center;
+```
+
+## Memperbarui repositori yang sudah ada
+
+Salin seluruh isi paket revisi ini ke folder repositori lokal dan izinkan penggantian berkas. Lalu jalankan:
+
+```powershell
+git add .
+git commit -m "Update foto, kredit, logo, dan tampilan beranda"
+git push
+```
