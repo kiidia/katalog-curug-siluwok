@@ -80,20 +80,15 @@ Sebelum situs diumumkan secara resmi:
 - Lakukan pemeriksaan terakhir nama ilmiah dan status konservasi.
 - Uji semua halaman dan kode QR pada beberapa telepon genggam.
 
-## Mengganti warna hero dengan foto Curug Siluwok
+## Foto hero Curug Siluwok
 
-Beranda saat ini memakai warna hijau polos. Setelah foto Curug Siluwok tersedia:
+Foto hero beranda sudah tersedia di:
 
-1. Simpan foto sebagai `assets/images/hero-curug-siluwok.webp`.
-2. Buka `assets/css/site.css`.
-3. Pada aturan `.hero-panel.hero-solid`, tambahkan:
-
-```css
-background-image: linear-gradient(rgba(20, 41, 29, .72), rgba(20, 41, 29, .72)),
-                  url("../images/hero-curug-siluwok.webp");
-background-size: cover;
-background-position: center;
+```text
+assets/images/site/curug-siluwok-hero.webp
 ```
+
+Untuk menggantinya di kemudian hari, gunakan nama berkas yang sama. Foto sebaiknya berorientasi lanskap dan cukup lebar agar tetap baik pada layar desktop maupun telepon genggam.
 
 ## Memperbarui repositori yang sudah ada
 
@@ -101,6 +96,6 @@ Salin seluruh isi paket revisi ini ke folder repositori lokal dan izinkan pengga
 
 ```powershell
 git add .
-git commit -m "Update foto, kredit, logo, dan tampilan beranda"
+git commit -m "Tambahkan foto hero Curug Siluwok dan rapikan halaman referensi"
 git push
 ```

@@ -57,8 +57,15 @@ svg { width: 1.25em; height: 1.25em; fill: currentColor; }
 .hero-panel { min-height: 530px; border-radius: var(--radius-xl); overflow: hidden; position: relative; box-shadow: var(--shadow); background: var(--forest-900); }
 .hero-panel > img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; }
 .hero-panel::after { content: none; }
-.hero-panel.hero-solid { background: #244f32; }
-/* Saat foto Curug Siluwok tersedia, tambahkan background-image pada .hero-panel.hero-solid dan gunakan background-size: cover. */
+.hero-panel.hero-solid {
+  background-image:
+    linear-gradient(90deg, rgba(13, 33, 22, .92) 0%, rgba(13, 33, 22, .76) 42%, rgba(13, 33, 22, .34) 72%, rgba(13, 33, 22, .18) 100%),
+    url("../images/site/curug-siluwok-hero.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.content-layout-single { grid-template-columns: minmax(0, 1fr); }
 .hero-copy { position: relative; z-index: 2; color: white; max-width: 620px; padding: 88px 64px; }
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: .13em; font-weight: 800; font-size: .75rem; color: #dbe7c3; }
 .hero h1 { font-size: clamp(2.3rem, 5vw, 4.5rem); line-height: 1.02; margin: 18px 0 16px; letter-spacing: -.04em; }
@@ -207,6 +214,7 @@ svg { width: 1.25em; height: 1.25em; fill: currentColor; }
   .brand-mark { width: 38px; height: 38px; }
   .hero { padding-top: 12px; }
   .hero-panel { min-height: 520px; border-radius: 22px; }
+  .hero-panel.hero-solid { background-position: 66% center; }
   .hero-panel::after { content: none; }
   .hero-copy { padding: 72px 24px 54px; }
   .hero h1 { font-size: 2.65rem; }
